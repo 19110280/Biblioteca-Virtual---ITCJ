@@ -103,7 +103,7 @@ header a:hover {
 /* Main */
 main {
     background: white;
-    height: 197vh;
+    height: 200vh;
     padding: 10px;
     display: flex;
 }
@@ -146,7 +146,7 @@ main a{
 }
 
 main button{
-    margin-top: 3vh;
+    margin-top: 2vh;
     background-color: #1d3968;
     border-radius: 10px;
     color: white;
@@ -167,6 +167,10 @@ main button{
 
     main .title {
         font-size: 40px;
+    }
+
+    main button{
+        margin-top: 3vh;
     }
 }
 

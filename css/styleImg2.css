@@ -103,7 +103,7 @@ header a:hover {
 /* Main */
 main {
     background-color: white;
-    height: 98vh;
+    height: 100vh;
     padding: 10px;
     display: flex;
 }
