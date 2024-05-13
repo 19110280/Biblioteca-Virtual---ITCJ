@@ -102,8 +102,8 @@ header a:hover {
 
 /* Main */
 main {
-    background: plum;
-    height: 225vh;
+    background: cyan;
+    height: 230vh;
     padding: 10px;
     display: flex;
 }
