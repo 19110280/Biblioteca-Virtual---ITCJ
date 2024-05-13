@@ -102,8 +102,8 @@ header a:hover {
 
 /* Main */
 main {
-    background: purple;
-    height: 180vh;
+    background: pink;
+    height: 185vh;
     padding: 15px;
     display: flex;
 }
