@@ -102,7 +102,7 @@ header a:hover {
 
 /* Main */
 main {
-    background: white;
+    background: plum;
     height: 225vh;
     padding: 10px;
     display: flex;
@@ -159,6 +159,7 @@ main button{
     /*Main*/
     main {
         height: 295vh;
+        background: white;
     }
 
     main .contenedor-anuncio {
