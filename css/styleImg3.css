@@ -103,8 +103,8 @@ header a:hover {
 /* Main */
 main {
     background: white;
-    height: 151.5vh;
-    padding: 15px;
+    height: 165vh;
+    padding: 10px;
     display: flex;
 }
 
@@ -115,7 +115,7 @@ main .fondo{
 }
 
 main .contenedor-anuncio{
-    width: 98%;
+    width: 98.5%;
     position: absolute;
     text-align: center;
 }
@@ -133,7 +133,7 @@ main .title {
 
 main .problem {
     width: auto;
-    height: 90%;
+    height: auto;
     /*La sombra baja de la caja de 'Noticias'*/
     /* /Algo /Borde /Difuminado /Linea*/
     box-shadow: 0 0 0 3px black;
@@ -146,9 +146,9 @@ main a{
 }
 
 main button{
-    margin-top: 6.5vh;
+    margin-top: 3.5vh;
     background-color: #1d3968;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
     font-size: 100%;
 }
@@ -158,24 +158,15 @@ main button{
 
     /*Main*/
     main {
-        height: 107vh;
+        height: 245vh;
     }
 
-    main .contenedor-anuncio{
-        width: 97.5%;
+    main .contenedor-anuncio {
+        width: 98%;
     }
 
     main .title {
         font-size: 40px;
-    }
-
-    main .problem{
-        height: 80vh;
-        width: auto;
-    }
-
-    main button{
-        font-size: 80%;
     }
 }
 
@@ -184,11 +175,11 @@ main button{
 
     /*Main*/
     main {
-        height: 70vh;
+        height: 115vh;
     }
 
-    main .contenedor-anuncio{
-        width: 96%;
+    main .contenedor-anuncio {
+        width: 97%;
     }
 
     main .title{
@@ -196,12 +187,12 @@ main button{
     }
 
     main .problem{
-        height: 54vh;
-        width: auto;
+        height: auto;
+        width: 80%;
     }
 
     main button{
-        font-size: 90%;
+        font-size: 85%;
     }
 }
 
@@ -210,12 +201,12 @@ main button{
 
     /*Main*/
     main {
-        height: 74vh;
-        padding: 8px;
+        height: 175vh;
+        padding: 6px;
     }
 
     main .contenedor-anuncio{
-        width: 96.5%;
+        width: 96.9%;
     }
 
     main .title{
@@ -224,10 +215,11 @@ main button{
 
     main .problem{
         width: 95%;
+        height: auto;
     }
 
     main button{
-        font-size: 10.4px;
+        font-size: 10px;
     }
 }
 
@@ -236,11 +228,8 @@ main button{
 
     /*Main*/
     main {
-        height: 70vh;
-    }
-
-    main .contenedor-anuncio{
-        width: 96%;
+        height: 83vh;
+        padding: 6px;
     }
 
     main .title{
@@ -248,12 +237,12 @@ main button{
     }
 
     main .problem{
-        width: 97%;
+        width: 90%;
+        height: auto;
     }
 
     main button{
-        font-size: 8.2px;
-        margin-top: 2.5vh;
+        font-size: 8px;
     }
 }
 
