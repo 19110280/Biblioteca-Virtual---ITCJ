@@ -1,0 +1,127 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Main */
+main {
+    background-color: white;
+    height: auto;
+    padding: 15px;
+    display: flex;
+}
+
+main .fondo {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+main .contenedor {
+    position: absolute;
+    width: 97.5%;
+    text-align: start;
+    /*align-items: center;*/
+}
+
+main .linea {
+    /*align-items: center;*/
+    height: 10px;
+    background: black;
+}
+
+main .title {
+    padding: 35px 0 10px 0;
+    text-align: center;
+    color: #1d3968;
+    font-size: 40px;
+}
+
+main .calendario {
+    font-size: 43.3px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+main th, tr, td {
+    padding: 10px;
+}
+
+main a {
+    font-size: 10px;
+}
+
+/**Responsive 'Main'{1366px}*/
+@media(max-width: 1366px) {
+
+    /*Main*/
+    main {
+        height: 98vh;
+    }
+}
+
+/*Responsive 'Main'{769px}*/
+@media(max-width: 769px) {
+
+    /*Main*/
+    main {
+        height: 83vh;
+        /*width: auto;*/
+        display: block;
+        /*Fondo del conejo*/
+        background-image: url("../img/fondo.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+        position: relative;
+    }
+
+    /*Fondo del conejo*/
+    main::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.500);
+    }
+
+    main .fondo {
+        display: none;
+    }
+
+    main .contenedor {
+        width: 96%;
+    }
+}
+
+/*Responsive 'Main' {560px}*/
+@media(max-width: 560px) {
+
+    /*Main*/
+    main {
+        height: 91vh;
+    }
+
+    main .contenedor h1 {
+        font-size: 25px;
+    }
+}
+
+/*Responsive 'Header' {430px}*/
+@media(max-width: 430px) {
+
+    /*Main*/
+    main {
+        padding: 8px;
+        height: 61vh;
+    }
+
+    main .contenedor h1 {
+        padding: 25px 0 10px;
+    }
+}
