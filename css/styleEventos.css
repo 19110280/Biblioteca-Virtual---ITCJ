@@ -41,13 +41,13 @@ main .title {
 }
 
 main .calendario {
-    font-size: 43.3px;
-    padding-left: 10px;
+    font-size: 28.1px;
+    padding-left: 15px;
     padding-bottom: 15px;
 }
 
 main th, tr, td {
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 main a {
