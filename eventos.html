@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>ITCJ | Biblioteca Virtual</title>
@@ -39,78 +40,73 @@
     </header>
 
     <main>
-        <link rel="stylesheet" href="css/styleEventos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/syleEventos.css" />
 
-        <img class="fondo" src="img/fondo.png" alt="">
-        <div class="contenedor">
-            <div class="linea">
-                <hr>
-            </div>
 
-            <h1 class="title">"Eventos de Noviembre"</h1>
-            <div class="calendario">
-                <table border="5">
-                    <tr>
-                        <th>&ensp;&ensp;Lunes&ensp;&ensp;</th>
-                        <th>&ensp;&ensp;Martes&ensp;&ensp;</th>
-                        <th>&ensp;Miercoles&ensp;</th>
-                        <th>&ensp;&ensp;Jueves&ensp;&ensp;</th>
-                        <th>&ensp;&ensp;Viernes&ensp;&ensp;</th>
-                        <th>&ensp;&ensp;Sabado&ensp;&ensp;</th>
-                        <th>&ensp;Domingo&ensp;</th>
-                    </tr>
-                    <tr>
-                        <td>28</td>
-                        <td>29</td>
-                        <td>30</td>
-                        <td>31</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>13</td>
-                        <td>14</td>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                    </tr>
-                    <tr>
-                        <td>18</td>
-                        <td>19</td>
-                        <td>20</td>
-                        <td>21</td>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                    </tr>
-                    <tr>
-                        <td>25</td>
-                        <td>26</td>
-                        <td>27</td>
-                        <td>28</td>
-                        <td>29</td>
-                        <td>30</td>
-                        <td>1</td>
-                    </tr>
-                </table>
+        <div class="container">
+
+            <div class="left">
+                <div class="calendar">
+                    <div class="month">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="date">diciembre 2015</div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Dom</div>
+                        <div>Lun</div>
+                        <div>Mar</div>
+                        <div>Mié</div>
+                        <div>Jue</div>
+                        <div>Vie</div>
+                        <div>Sáb</div>
+                    </div>
+                    <div class="days"></div>
+                    <div class="goto-today">
+                        <div class="goto">
+                            <input type="text" placeholder="mm/yyyy" class="date-input" />
+                            <button class="goto-btn">Go</button>
+                        </div>
+                        <button class="today-btn">Hoy</button>
+                    </div>
+                </div>
             </div>
-            <div class="linea">
-                <hr>
+            <div class="right">
+                <div class="today-date">
+                    <div class="event-day">mié</div>
+                    <div class="event-date">12th diembre 2022</div>
+                </div>
+                <div class="events"></div>
+                <div class="add-event-wrapper">
+                    <div class="add-event-header">
+                        <div class="title">Añadir Evento</div>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                    <div class="add-event-body">
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Nombre Evento" class="event-name" />
+                        </div>
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Inicio del Evento" class="event-time-from" />
+                        </div>
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Fin del Evento" class="event-time-to" />
+                        </div>
+                    </div>
+                    <div class="add-event-footer">
+                        <button class="add-event-btn">Agregar Evento</button>
+                    </div>
+                </div>
             </div>
+            <button class="add-event">
+                <i class="fas fa-plus"></i>
+            </button>
         </div>
 
+        <script src="js/calendario.js"></script>
     </main>
 
     <footer>
