@@ -142,7 +142,7 @@ function addListner() {
         prevMonth();
         //Agregar activo al día en que se hizo clic después del mes es cambio
         setTimeout(() => {
-          //add active where no prev-date or next-date
+          //Agergar actividad donde no hay fecha anterior o próxima
           const days = document.querySelectorAll(".day");
           days.forEach((day) => {
             if (
@@ -155,7 +155,7 @@ function addListner() {
         }, 100);
       } else if (e.target.classList.contains("next-date")) {
         nextMonth();
-        //add active to clicked day afte month is changed
+        //Agregar actividad al día en que se hizo click despupes de que se modifique el mes
         setTimeout(() => {
           const days = document.querySelectorAll(".day");
           days.forEach((day) => {
@@ -199,7 +199,7 @@ dateInput.addEventListener("input", (e) => {
 gotoBtn.addEventListener("click", gotoDate);
 
 function gotoDate() {
-  console.log("here");
+  console.log("aqui");
   const dateArr = dateInput.value.split("/");
   if (dateArr.length === 2) {
     if (dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4) {
@@ -209,10 +209,10 @@ function gotoDate() {
       return;
     }
   }
-  alert("Invalid Date");
+  alert("Fecha Invalida");
 }
 
-//function get active day day name and date and update eventday eventdate
+//Función obtener día activo nombre del día y fecha y actualizar día del evento fecha del evento
 function getActiveDay(date) {
   const day = new Date(year, month, date);
   const dayName = day.toString().split(" ")[0];
@@ -220,7 +220,7 @@ function getActiveDay(date) {
   eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
 
-//function update events when a day is active
+//Función de actualización de eventos cuando un día está activo
 function updateEvents(date) {
   let events = "";
   eventsArr.forEach((event) => {
@@ -244,14 +244,14 @@ function updateEvents(date) {
   });
   if (events === "") {
     events = `<div class="no-event">
-            <h3>No Events</h3>
+            <h3>No Eventos</h3>
         </div>`;
   }
   eventsContainer.innerHTML = events;
   saveEvents();
 }
 
-//function to add event
+//Función para agregar evento
 addEventBtn.addEventListener("click", () => {
   addEventWrapper.classList.toggle("active");
 });
@@ -266,15 +266,13 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//allow 50 chars in eventtitle
+//50 caracteres en el título del evento
 addEventTitle.addEventListener("input", (e) => {
   addEventTitle.value = addEventTitle.value.slice(0, 60);
 });
 
 function defineProperty() {
   var osccred = document.createElement("div");
-  //osccred.innerHTML =
- //   "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
   osccred.style.position = "absolute";
   osccred.style.bottom = "0";
   osccred.style.right = "0";
@@ -291,7 +289,7 @@ function defineProperty() {
 
 defineProperty();
 
-//allow only time in eventtime from and to
+//Permitir solo tiempo en el evento inicio y fin
 addEventFrom.addEventListener("input", (e) => {
   addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
   if (addEventFrom.value.length === 2) {
@@ -312,17 +310,17 @@ addEventTo.addEventListener("input", (e) => {
   }
 });
 
-//function to add event to eventsArr
+//Función para agregar evento a ArraiEvents
 addEventSubmit.addEventListener("click", () => {
   const eventTitle = addEventTitle.value;
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
   if (eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "") {
-    alert("Please fill all the fields");
+    alert("Por favor rellene todos los campos");
     return;
   }
 
-  //check correct time format 24 hour
+  //Comprobar el formato de hora correcto 24 horas
   const timeFromArr = eventTimeFrom.split(":");
   const timeToArr = eventTimeTo.split(":");
   if (
@@ -333,14 +331,14 @@ addEventSubmit.addEventListener("click", () => {
     timeToArr[0] > 23 ||
     timeToArr[1] > 59
   ) {
-    alert("Invalid Time Format");
+    alert("Formato de hora no válido");
     return;
   }
 
   const timeFrom = convertTime(eventTimeFrom);
   const timeTo = convertTime(eventTimeTo);
 
-  //check if event is already added
+  //Comprobar si el evento ya está añadido
   let eventExist = false;
   eventsArr.forEach((event) => {
     if (
@@ -394,17 +392,17 @@ addEventSubmit.addEventListener("click", () => {
   addEventFrom.value = "";
   addEventTo.value = "";
   updateEvents(activeDay);
-  //select active day and add event class if not added
+  //Seleccionar el día activo y agregar la clase de evento si no se agregó
   const activeDayEl = document.querySelector(".day.active");
   if (!activeDayEl.classList.contains("event")) {
     activeDayEl.classList.add("event");
   }
 });
 
-//function to delete event when clicked on event
+//Función para eliminar un evento al hacer click en él
 eventsContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("event")) {
-    if (confirm("Are you sure you want to delete this event?")) {
+    if (confirm("¿Estás seguro de que deseas eliminar este evento?")) {
       const eventTitle = e.target.children[0].children[1].innerHTML;
       eventsArr.forEach((event) => {
         if (
@@ -417,10 +415,10 @@ eventsContainer.addEventListener("click", (e) => {
               event.events.splice(index, 1);
             }
           });
-          //if no events left in a day then remove that day from eventsArr
+          //Si no quedan eventos en un día, elimine ese día de EventsArr
           if (event.events.length === 0) {
             eventsArr.splice(eventsArr.indexOf(event), 1);
-            //remove event class from day
+            //Eliminar la clase de evento del día.
             const activeDayEl = document.querySelector(".day.active");
             if (activeDayEl.classList.contains("event")) {
               activeDayEl.classList.remove("event");
@@ -433,14 +431,15 @@ eventsContainer.addEventListener("click", (e) => {
   }
 });
 
-//function to save events in local storage
+//Función para guardar eventos en el almacenamiento local
 function saveEvents() {
   localStorage.setItem("events", JSON.stringify(eventsArr));
 }
 
-//function to get events from local storage
+//Función para obtener eventos del almacenamiento local
 function getEvents() {
-  //check if events are already saved in local storage then return event else nothing
+  //Comprobar si los eventos ya están guardados en el almacenamiento local y luego devuelve el evento; de lo contario
+  //no pasa nada
   if (localStorage.getItem("events") === null) {
     return;
   }
@@ -448,7 +447,7 @@ function getEvents() {
 }
 
 function convertTime(time) {
-  //convert time to 24 hour format
+  //Convertir hora a formato de 24 horas
   let timeArr = time.split(":");
   let timeHour = timeArr[0];
   let timeMin = timeArr[1];
