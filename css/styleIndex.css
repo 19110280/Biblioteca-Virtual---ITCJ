@@ -204,26 +204,11 @@ main .correo img:hover {
     transform: scale(1.2);
 }
 
-/**Responsive 'Main'{1366px}*/
-@media(max-width: 1366px) {
-
-    /*Main*/
-    /**main {
-        height: 125vh;
-    }**/
-
-    main .menu img {
-        height: 15%;
-        color: black;
-    }
-}
-
 /*Responsive 'Main'{769px}*/
-@media(max-width: 769px) {
+@media screen and (max-width: 1000px) {
 
     /*Main*/
     main {
-        /*height: 90vh;*/
         padding: 15px;
         display: block;
     }
@@ -295,85 +280,14 @@ main .correo img:hover {
     }
 }
 
-/*Responsive 'Main' {560px}*/
-@media(max-width: 560px) {
-
-    /*Main*/
-    main {
-        padding: 10px;
-        height: 129vh;
-    }
-
-    main .contenedor-general {
-        height: 70vh;
-    }
-
-    main .menu {
-        height: 17vh;
-        margin-top: 4vh;
-        text-align: center;
-    }
-
-    main .menu img {
-        margin: 0%;
-        height: 16vh;
-        width: 160%;
-    }
-
-    main .menu a{
-        display: block;
-        height: 100%;
-        width: 10%;
-        margin: 0%;
-        margin-right: 10%;
-    }
-
-    main .espa {
-        padding-right: 7%;
-    }
-
-    main .menu h4{
-        justify-content: center;
-        margin-left: 5.5vh;
-        margin-top: 10px;
-    }
-
-    main .menu img:hover {
-        transform: scale(1.2);
-    }
-
-    main .icons{
-        margin-top: 8vh;
-    }
-    
-    main .aniversario {
-        margin-left: 1vh;
-    }
-    
-    main .moodle {
-        margin-left: 0.5vh;
-    }
-    
-    main .sii {
-        margin-left: 0.5vh;
-    }
-    
-    main .sii img:hover {
-        transform: scale(1.2);
-    }
-    
-    main .correo {
-        margin-left: 0.5vh;
-    }
-}
-
 /*Responsive 'Header' {430px}*/
-@media(max-width: 430px) {
+@media screen and (max-width: 450px) {
 
     /*Main*/
     main {
         padding: 5px;
-        height: 103vh;
+        height: auto;
+        display: block;
     }
 
     main .contenedor-general {
@@ -381,33 +295,37 @@ main .correo img:hover {
     }
 
     main .menu {
-        margin-top: 3vh;
-        height: 16vh;
+        margin: 0;
+        height: auto;
         justify-content: center;
         text-align: center;
+        margin-right: 10px;
     }
 
     main .menu img {
-        margin-top: 0px;
-        height: 11.5vh;
-        width: 7vh;
-        padding-right: 1.5vh;
+        margin-top: 5px;
+        height: 13vh;
+        width: 13vh;
+        padding-right: 3px;
     }
 
     main .menu a{
-        height: 90%;
-        width: 10%;
+        height: 50%;
+        width: 15%;
     }
 
     main .menu h4{
-        margin-top: 10px;
-        font-size: 20px;
-        text-align: center;
-        margin-left: 3.5vh;
+        margin: 0;
+        font-size: 19px;
+    }
+
+    main .espa{
+        padding: 0 20px;
     }
 
     main .icons img{
-        margin-top: -40px;
-        width: 10vh;
+        height: auto;
+        margin-top: 5px;
+        width: 13vh;
     }
 }

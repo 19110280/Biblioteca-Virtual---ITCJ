@@ -64,26 +64,27 @@ header a:hover {
 }
 
 /*Responsive 'Header' {560px}*/
-@media(max-width: 500px) {
+@media(max-width: 450px) {
 
     /*Header*/
     header {
-        height: 160px;
+        height: auto;
         display: block;
     }
 
     header img {
+        width: 15vh;
         padding-top: 10px;
     }
 
-    header .txt {
+    header .prueba {
         display: none;
-        /*padding-left: 5px;*/
     }
 
     header .espacio {
         display: block;
-        /*font-size: 10px;*/
+        font-size: 15px;
+        padding-bottom: 15px;
     }
 }
 
@@ -161,32 +162,35 @@ footer .contVisitas {
 @media screen and (max-width: 1000px) {
 
     /*Footer*/
-    /**footer {
-        height: 390px;
-    }**/
+    footer {
+        height: auto;
+    }
+
+    footer .datos {
+        display: flex;
+        color: white;
+        /*Centra los componentes el la caja 'header'*/
+        justify-content: center;
+        /*Separa los componentes*/
+        justify-content: space-between;
+        padding: 0;
+        font-size: 13px;
+    }
 
     footer .campus {
         font-size: 17px;
-        margin-left: 70px;
-    }
-
-    footer .aniversario {
-        padding-top: 25px;
+        margin-right: 80px;
     }
 
     footer .contVisitas {
-        margin-left: 84%;
+        margin-left: 80%;
     }
 }
 
 /*Responsive 'Footer' {430px}*/
-@media(max-width: 500px) {
+@media screen and (max-width: 450px) {
 
     /*Footer*/
-    footer {
-        height: 460px;
-    }
-
     .icons img{
         margin-top: 20px;
         height: 120px;
@@ -204,12 +208,9 @@ footer .contVisitas {
         display: block;
     }
 
-    footer .itcj {
-        margin-right: 40px;
-    }
-
-    .campus {
-        font-size: 14px;
+    footer .campus {
+        font-size: 17px;
+        margin-left: 30px;
     }
 
     .aniversario {
@@ -220,6 +221,6 @@ footer .contVisitas {
 
     footer .contVisitas {
         margin-top: 10%;
-        margin-left: 69%;
+        margin-left: 60%;
     }
 }
