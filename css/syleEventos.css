@@ -11,13 +11,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 35px;
+  font-size: 17.5px;
 }
 
 main {
   height: auto;
   padding: 15px;
-
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -35,7 +34,6 @@ main {
   padding: 5px;
   color: white;
   display: flex;
-
   border-radius: 10px;
   background-color: var(--gris);
 }
@@ -576,7 +574,7 @@ main {
 /* media queries */
 
 @media screen and (max-width: 1000px) {
-  body {
+  main {
     align-items: flex-start;
     justify-content: flex-start;
   }

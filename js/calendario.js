@@ -22,6 +22,16 @@ let activeDay;
 let month = today.getMonth();
 let year = today.getFullYear();
 
+const week = [
+  "Domingo",
+  "Lunes",
+  "Martes",
+  "Miercoles",
+  "Jueves",
+  "Viernes",
+  "Sabado"];
+
+
 const months = [
   "Enero",
   "Febrero",
@@ -215,8 +225,7 @@ function gotoDate() {
 //Función obtener día activo nombre del día y fecha y actualizar día del evento fecha del evento
 function getActiveDay(date) {
   const day = new Date(year, month, date);
-  const dayName = day.toString().split(" ")[0];
-  eventDay.innerHTML = dayName;
+  eventDay.innerHTML = week[day.getDay()];
   eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
 

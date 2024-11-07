@@ -43,7 +43,7 @@ header a:hover {
 }
 
 /*Responsive 'Header' {800px}*/
-@media(max-width: 800px) {
+@media screen and (max-width: 1000px) {
 
     /*Header*/
     header {
@@ -64,7 +64,7 @@ header a:hover {
 }
 
 /*Responsive 'Header' {560px}*/
-@media(max-width: 560px) {
+@media(max-width: 500px) {
 
     /*Header*/
     header {
@@ -84,19 +84,6 @@ header a:hover {
     header .espacio {
         display: block;
         /*font-size: 10px;*/
-    }
-}
-
-/*Responsive 'Header' {460px}*/
-@media(max-width: 460px) {
-
-    /*Header*/
-    header {
-        height: 150px;
-    }
-
-    header img {
-        width: 74px;
     }
 }
 
@@ -164,22 +151,14 @@ footer .campus:hover {
     color: rgb(193, 22, 39);
 }
 
-/**footer .aniversario {
-    display: flex;
-    justify-content: center;
-    height: 150px;
-    width: 250px;
-    margin-left: 40%;
-}**/
-
 footer .contVisitas {
     display: flex;
-    margin-left: 90%;
+    margin-left: 85%;
     margin-top: 3%;
 }
 
 /**Responsive 'Footer'{1366px}*/
-@media(max-width: 1366px) {
+@media screen and (max-width: 1000px) {
 
     /*Footer*/
     /**footer {
@@ -196,17 +175,22 @@ footer .contVisitas {
     }
 
     footer .contVisitas {
-        margin-left: 90%;
+        margin-left: 84%;
     }
 }
 
-/*Responsive 'Footer'{800px}*/
-@media(max-width: 769px) {
+/*Responsive 'Footer' {430px}*/
+@media(max-width: 500px) {
 
     /*Footer*/
-    /**footer {
-        height: 540px;
-    }**/
+    footer {
+        height: 460px;
+    }
+
+    .icons img{
+        margin-top: 20px;
+        height: 120px;
+    }
 
     footer .datos {
         display: none;
@@ -221,79 +205,21 @@ footer .contVisitas {
     }
 
     footer .itcj {
-        display: block;
+        margin-right: 40px;
     }
 
-    footer .campus {
-        font-size: 18px;
-    }
-
-    footer .aniversario {
-        height: 140px;
-        width: 250px;
-        margin-left: 35%;
-    }
-
-    footer .contVisitas {
-        margin-left: 85%;
-    }
-}
-
-/*Responsive 'Footer' {560px}*/
-@media(max-width: 560px) {
-
-    /*Footer*/
-    /**footer {
-        height: 480px;
-    }**/
-
-    footer .datosBlock {
-        font-size: 16px;
-    }
-
-    footer .itcj {
-        padding: 0 5px;
-    }
-
-    footer .campus {
-        font-size: 15px;
-    }
-
-    footer .aniversario {
-        margin-top: -20px;
-        height: 150px;
-        width: 250px;
-        margin-left: 30%;
-    }
-
-    footer .contVisitas {
-        margin-left: 80%;
-    }
-}
-
-/*Responsive 'Footer' {430px}*/
-@media(max-width: 430px) {
-
-    /*Footer*/
-    /**footer {
-        height: 460px;
-    }**/
-
-    footer .itcj {
-        padding: 0 20px;
-    }
-
-    footer .campus {
+    .campus {
         font-size: 14px;
     }
 
-    footer .aniversario {
+    .aniversario {
         height: 100px;
         width: 200px;
         margin-left: 0;
     }
 
     footer .contVisitas {
+        margin-top: 10%;
         margin-left: 69%;
     }
 }
