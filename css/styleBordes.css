@@ -64,7 +64,7 @@ header a:hover {
 }
 
 /*Responsive 'Header' {560px}*/
-@media(max-width: 450px) {
+@media screen and (max-width: 450px) {
 
     /*Header*/
     header {
@@ -191,6 +191,10 @@ footer .contVisitas {
 @media screen and (max-width: 450px) {
 
     /*Footer*/
+    footer{
+        width: auto;
+    }
+
     .icons img{
         margin-top: 20px;
         height: 120px;
