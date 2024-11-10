@@ -150,8 +150,9 @@ footer .campus:hover {
 
 footer .contVisitas {
     display: flex;
-    margin-left: 85%;
-    margin-top: 3%;
+    position: relative;
+    justify-content:flex-end;
+    margin-top: 10px;
 }
 
 /**Responsive 'Footer'{1366px}*/
