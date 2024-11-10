@@ -95,7 +95,7 @@ header h1 {
     /*Header*/
     header {
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 
     header .container {
@@ -176,11 +176,12 @@ footer .contVisitas {
     /*Footer*/
     footer{
         width: 100%;
-        height: 100%;
+        height: auto;
+        background-color: rebeccapurple;
     }
     
     footer .datos{
-        background-color: violet;
-        font-size: 15px;
+        background-color: black;
+        font-size: 10.5px;
     }
 }
