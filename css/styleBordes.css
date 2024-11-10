@@ -1,4 +1,13 @@
-/*Reset*/
+/*Colores*/
+:root {
+    --adown: #3771d754;
+    --rojo: #9c0312;
+    --azul: #1d3968;
+    --rdown: #c11627;
+    --gris: #515151;
+}
+
+/*All*/
 * {
     margin: 0;
     padding: 0;
@@ -9,37 +18,49 @@
 /* Header */
 header {
     /*Tamaño de Altura*/
-    height: 100px;
-    /*Color de la caja 'Headre'*/
-    background: #1d3968;
-    /*Es la separación de los lados*/
+    height: auto;
+    /*Separación dentro del elemento*/
     padding: 20px;
+    position: relative;
+    min-width: 880px;
     /*El orden como van los componente*/
     display: flex;
-    /*Centra los componentes el la caja 'header'*/
+    /*Alinear componentes del eje 'Y'*/
     align-items: center;
-    /*Separa los componentes*/
-    justify-content: space-between;
+    /*Color de la caja 'Headre'*/
+    background: var(--azul);
 }
 
-header .espacio {
-    display: none;
+header .container {
+    position: relative;
+    width: 97.5%;
+    min-width: 400px;
+    /*Separación fuera del elemento*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .url img {
+    margin-right: 9.5px;
 }
 
 header a {
-    /*Color de la letra*/
-    color: white;
-    /*Posición de la letra*/
-    text-align: center;
     /*Borrar linea del 'link'*/
     text-decoration: none;
-    /*background: yellow;*/
     /*El tiempo de cambio de color*/
     transition: 0.5s;
 }
 
 header a:hover {
-    color: rgb(193, 22, 39);
+    color: var(--rdown);
+}
+
+header h1 {
+    /*Color de la letra*/
+    color: white;
+    /*Posición de la letra*/
+    text-align: center;
 }
 
 /*Responsive 'Header' {800px}*/
@@ -47,109 +68,84 @@ header a:hover {
 
     /*Header*/
     header {
-        padding: 0 15px;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    header .container .url,
+    header .container .txt {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     header img {
-        width: 100px;
+        width: 90%;
     }
 
-    header a {
-        padding-left: 5px;
-    }
-
-    header .txt {
+    header h1 {
         font-size: 20px;
     }
 }
 
 /*Responsive 'Header' {560px}*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 
     /*Header*/
     header {
+        width: 100%;
         height: auto;
+    }
+
+    header .container {
         display: block;
     }
 
     header img {
-        width: 15vh;
-        padding-top: 10px;
-    }
-
-    header .prueba {
-        display: none;
-    }
-
-    header .espacio {
-        display: block;
-        font-size: 15px;
-        padding-bottom: 15px;
+        width: 85%;
+        justify-content: space-evenly;
     }
 }
 
 /* footer */
 footer {
-    display: block;
-    background-color: #1d3968;
     height: auto;
-    width: auto;
-    /*Arriba, Derecha, Abajo, Izquierda*/
-    padding: 0 0 10px 0;
-}
-
-footer .icons {
-    background: white;
-    padding: 20px;
-    /*El orden como van los componente*/
+    padding: 5px 15px 10px;
+    position: relative;
+    min-width: 880px;
     display: flex;
-    /*Centra los componentes el la caja 'header'*/
     align-items: center;
-    /*Separa los componentes*/
-    justify-content: space-evenly;
+    justify-content: center;
+    background-color: var(--azul);
 }
 
-footer .correo{
-    margin-right: 10%;
+footer .container{
+    width: 100%;
+    height: auto;
 }
 
 footer .datos {
     display: flex;
-    color: white;
-    /*Centra los componentes el la caja 'header'*/
-    justify-content: center;
-    /*Separa los componentes*/
-    justify-content: space-between;
     padding: 0 10px;
-}
-
-main .datoBlock {
-    display: block;
-}
-
-footer .datosBlock {
-    display: none;
-}
-
-footer .linea {
-    padding: 0 20px;
-}
-
-footer .itcj {
-    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
 footer .campus {
-    color: white;
-    text-align: center;
-    justify-content: center;
+    display: flex;
+    text-align:center;
     margin-top: 25px;
-    margin-left: 78px;
-    font-size: 20px;
+    justify-content: space-evenly;
+}
+
+footer a{
+    color: white;
 }
 
 footer .campus:hover {
-    color: rgb(193, 22, 39);
+    color: var(--rdown);
 }
 
 footer .contVisitas {
@@ -164,67 +160,16 @@ footer .contVisitas {
     /*Footer*/
     footer {
         height: auto;
-    }
-
-    footer .datos {
-        display: flex;
-        color: white;
-        /*Centra los componentes el la caja 'header'*/
-        justify-content: center;
-        /*Separa los componentes*/
-        justify-content: space-between;
-        padding: 0;
-        font-size: 13px;
-    }
-
-    footer .campus {
-        font-size: 17px;
-        margin-right: 80px;
-    }
-
-    footer .contVisitas {
-        margin-left: 80%;
+        width: 100%;
     }
 }
 
 /*Responsive 'Footer' {430px}*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 
     /*Footer*/
     footer{
-        width: auto;
-    }
-
-    .icons img{
-        margin-top: 20px;
-        height: 120px;
-    }
-
-    footer .datos {
-        display: none;
-    }
-
-    footer .datosBlock {
-        padding-top: 10px;
-        color: white;
-        text-align: center;
-        font-size: 20px;
-        display: block;
-    }
-
-    footer .campus {
-        font-size: 15px;
-        margin-left: 30px;
-    }
-
-    .aniversario {
-        height: 100px;
-        width: 200px;
-        margin-left: 0;
-    }
-
-    footer .contVisitas {
-        margin-top: 10%;
-        margin-left: 60%;
+        width: 100%;
+        height: auto;
     }
 }
