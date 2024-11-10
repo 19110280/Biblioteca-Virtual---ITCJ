@@ -177,10 +177,12 @@ footer .contVisitas {
     footer{
         width: 100%;
         height: auto;
-        background-color: violet;
+        background-color: darkorchid;
     }
     
     footer .datos{
+        height: auto;
+        width: 100%;
         background-color: black;
         display: flex;
         text-align: center;
