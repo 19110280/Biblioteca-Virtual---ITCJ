@@ -95,7 +95,7 @@ header h1 {
     /*Header*/
     header {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
     header .container {
@@ -105,6 +105,11 @@ header h1 {
     header img {
         width: 85%;
         justify-content: space-evenly;
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
     }
 }
 
@@ -152,7 +157,7 @@ footer .contVisitas {
     display: flex;
     position: relative;
     justify-content:flex-end;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 /**Responsive 'Footer'{1366px}*/
@@ -171,6 +176,11 @@ footer .contVisitas {
     /*Footer*/
     footer{
         width: 100%;
-        height: auto;
+        height: 100%;
+    }
+    
+    footer .datos{
+        background-color: violet;
+        font-size: 15px;
     }
 }
