@@ -184,8 +184,9 @@ footer .contVisitas {
         width: 100%;
         display: flex;
         text-align: center;
-        font-size: 15px;
+        font-size: 13px;
         padding: 0;
         justify-content: space-evenly;
+        background-color: violet;
     }
 }
