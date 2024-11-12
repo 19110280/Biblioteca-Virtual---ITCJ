@@ -22,7 +22,8 @@ header {
     /*Separación dentro del elemento*/
     padding: 20px;
     position: relative;
-    min-width: 880px;
+    /*min-width: 880px;*/
+    min-width: 660px;
     /*El orden como van los componente*/
     display: flex;
     /*Alinear componentes del eje 'Y'*/
@@ -118,7 +119,8 @@ footer {
     height: auto;
     padding: 5px 15px 10px;
     position: relative;
-    min-width: 880px;
+    /*min-width: 880px;*/
+    min-width: 660px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,6 +189,5 @@ footer .contVisitas {
         font-size: 13px;
         padding: 0;
         justify-content: space-evenly;
-        background-color: violet;
     }
 }
