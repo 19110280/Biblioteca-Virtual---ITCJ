@@ -254,6 +254,6 @@ main .icons img:hover {
 
     main .icons {
         position: relative;
-        margin-top: 45vh;
+        background-color: violet;
     }
 }
