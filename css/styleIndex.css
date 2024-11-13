@@ -254,7 +254,6 @@ main .icons img:hover {
 
     main .icons {
         position: relative;
-        background-color: aqua;
         margin-top: 35%;
     }
 }
