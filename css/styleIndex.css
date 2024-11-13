@@ -1,3 +1,12 @@
+/*Colores*/
+:root {
+    --adown: #3771d754;
+    --rojo: #9c0312;
+    --azul: #1d3968;
+    --rdown: #c11627;
+    --gris: #515151;
+}
+
 /*Reset*/
 * {
     margin: 0;
@@ -10,24 +19,40 @@
 main {
     /*Tamaño de Altura*/
     height: auto;
-    /*Color de la caja de 'Main'*/
-    background: white;
-    /*Separación de los lados*/
-    padding: 20px 20px 30px;
-    /*El orden de como van los componentes*/
+    padding: 30px 15px;
+    position: relative;
+    min-width: 660px;
     display: block;
+    align-items: center;
+    background: white;
 }
 
-main .prueba {
+main .container {
+    position: relative;
+    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+}
+
+main .superior {
+    width: 100%;
+    height: 100vh;
+    position: relative;
     display: flex;
+    justify-content: center;
 }
 
-main .contenedor-general {
+main .contenedor-slider {
     /*Para que los iconos no se salgan del contenedor*/
     position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    min-width: 660px;
     height: 100vh;
     /*La sombra baja de la caja de 'Noticias'*/
-    box-shadow: 0 8px 32px 0 #1d3968;
+    box-shadow: 0 8px 32px 0 var(--azul);
     /*Curva de las esquinas de la caja de 'Noticias'*/
     border-radius: 15px;
     /*El traslado de las imagenes*/
@@ -38,22 +63,24 @@ main .contenedor-general {
     background-position: top center;
     background-size: contain;
     position: relative;
+    margin-right: 15px;
 }
 
 /*Fondo del conejo*/
-main .contenedor-general::before {
+main .contenedor-slider::before {
     position: relative;
     content: "";
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.500);
+    background-color: var(--gris, 0.500);
 }
 
 main .carrusel {
     /*Es la cantidad de imagenes que usaras*/
-    width: 200%; /*No NOTICIAS 1/2*/
+    width: 200%;
+    /*No NOTICIAS 1/2*/
     height: 100%;
     display: flex;
     /*border: solid thin red;*/
@@ -61,27 +88,19 @@ main .carrusel {
 
 main .slider-section {
     /*Se divide por la cantidad de imagenes a usar*/
-    width: calc(100% / 2); /*No. NOTICIAS 2/2*/
+    width: calc(100% / 2);
+    /*No. NOTICIAS 2/2*/
     height: 100%;
     text-align: center;
 }
 
-main .slider-section img {
-    text-align: center;
-    /* width: 100%;
-    height: 100%;*/
-    /*object-fit: cover;*/
-    /*align-items: center;*/
-}
-
-main .slider-section .ex img {
+main .slider-section .ancho img {
     width: 100%;
     height: 100%;
-} 
+}
 
-main .slider-section .in img {
+main .slider-section .largo img {
     width: auto;
-    /*50%*/
     height: 100%;
 }
 
@@ -92,20 +111,13 @@ main .btn-left,
     top: 50%;
     font-size: 2.5rem;
     border-radius: 50%;
-    color: black;
-    /*rgb(128, 128, 128);*/
+    color: var(--rojo);
     transition: .5s ease;
-    /*background: transparent;*/
-    /*padding: 0;*/
-    /*font-weight: 600;*/
-    /*cursor: pointer;*/
-    /*transform: translate(0, -50);*/
-    /*user-select: none;*/
 }
 
 main .btn-left:hover,
 .btn-right:hover {
-    background: black;
+    background: var(--azul);
     color: white;
 }
 
@@ -120,23 +132,27 @@ main .btn-right {
 }
 
 main .menu {
-    width: 150px;
-    height: 100vh;
+    width: 10%;
+    height: 75%;
     display: block;
     /*padding: 0 10px 0 20px;*/
     justify-content: center;
+    align-items: flex-end;
+}
+
+main .icons {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    margin-left: 20px;
 }
 
 main .menu img {
     display: flex;
     width: 100%;
-    height: 18%;
+    height: 23.5%;
     /*Se "supone" que es para que las img. no se salgan del contenedor "menu"*/
     position: relative;
     transition: 0.5s;
-    margin-top: 20px;
 }
 
 main .menu a {
@@ -156,51 +172,19 @@ main .menu h2 {
     margin-top: 10px;
 }
 
-main .menu h4 {
-    display: none;
-}
-
 main .menu img:hover {
     transform: scale(1.10);
 }
 
 main .menu *:hover {
-    color: #c11627;
+    color: var(--rdown);
 }
 
-main .icons{
-    margin-top: 7vh;
+main .icons {
+    margin-top: 8vh;
 }
 
-main .aniversario {
-    margin-left: 19.5vh;
-}
-
-main .aniversario img:hover {
-    transform: scale(1.2);
-}
-
-main .moodle {
-    margin-left: 15vh;
-}
-
-main .moodle img:hover {
-    transform: scale(1.2);
-}
-
-main .sii {
-    margin-left: 15vh;
-}
-
-main .sii img:hover {
-    transform: scale(1.05);
-}
-
-main .correo {
-    margin-left: 15vh;
-}
-
-main .correo img:hover {
+main .icons img:hover {
     transform: scale(1.2);
 }
 
@@ -209,123 +193,67 @@ main .correo img:hover {
 
     /*Main*/
     main {
+        width: 100%;
+        height: auto;
         padding: 15px;
-        display: block;
     }
 
-    main .prueba{
-        display: block;
+    main .container{
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 
-    main .contenedor-general {
-        height: 67vh;
-        background-size: cover;
+    main .contenedor-slider{
+        width: 85%;
+        height: 100%;
     }
 
-    main .menu {
-        margin-top: 20px;
-        display: flex;
-        height:auto;
-        width: auto;
-        align-items: center;
-        font-size: 150%;
-        margin-right: 20px;
+    main .menu{
+        padding: 0 15px;
     }
 
-    main .menu img {
-        height: 13.5vh;
-        width: 80%;
-    }
-
-    main .espa {
-        padding-right: 35px;
-    }
-
-    main .menu h2 {
-        display: none;
-    }
-
-    main .menu h4 {
-        display: flex;
-        font-size: 3vh;
-        margin-right: 35px;
-    }
-
-    main .menu img:hover {
-        transform: scale(1.05);
-    }
-
-    main .icons{
-        margin-top: 3vh;
-    }
-    
-    main .aniversario {
-        margin-left: 5vh;
-    }
-    
-    main .moodle {
-        margin-left: 3vh;
-    }
-    
-    main .sii {
-        margin-left: 3vh;
-    }
-    
-    main .sii img:hover {
-        transform: scale(1.2);
-    }
-    
-    main .correo {
-        margin-left: 3vh;
+    main .icons {
+        margin-top: 7vh;
     }
 }
 
 /*Responsive 'Header' {430px}*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 
     /*Main*/
     main {
-        padding: 5px;
+        width: 100%;
         height: auto;
+    }
+
+    main .container{
+        height: auto;
+    }
+
+    main .superior{
         display: block;
     }
 
-    main .contenedor-general {
-        height: 65vh;
-    }
 
     main .menu {
-        margin: 0;
+        width: auto;
         height: auto;
-        justify-content: center;
-        text-align: center;
-        margin-right: 10px;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 35px;
+
     }
 
     main .menu img {
-        margin-top: 5px;
-        height: 13vh;
-        width: 13vh;
-        padding-right: 3px;
-    }
-
-    main .menu a{
-        height: 50%;
-        width: 15%;
-    }
-
-    main .menu h4{
-        margin: 0;
-        font-size: 19px;
-    }
-
-    main .espa{
-        padding: 0 20px;
-    }
-
-    main .icons img{
+        width: 100px;
         height: auto;
-        margin-top: 5px;
-        width: 13vh;
+    }
+
+    main .icons {
+        position: relative;
+        margin-top: 45vh;
     }
 }
