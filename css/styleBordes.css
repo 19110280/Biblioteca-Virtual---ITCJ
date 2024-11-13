@@ -120,7 +120,7 @@ footer {
     padding: 5px 15px 10px;
     position: relative;
     /*min-width: 880px;*/
-    min-width: 670px;
+    min-width: 660px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,11 +184,10 @@ footer .contVisitas {
     footer .datos{
         height: auto;
         width: 100%;
-        display: flex;
+        display: block;
         text-align: center;
-        font-size: 13px;
         padding: 0;
         justify-content: space-evenly;
-        background-color: aqua;
+        background-color: violet;
     }
 }
