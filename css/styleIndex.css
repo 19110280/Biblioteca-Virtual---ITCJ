@@ -212,10 +212,6 @@ main .icons img:hover {
     main .menu{
         padding: 0 15px;
     }
-
-    main .icons {
-        margin-top: 7vh;
-    }
 }
 
 /*Responsive 'Header' {430px}*/
@@ -225,14 +221,17 @@ main .icons img:hover {
     main {
         width: 100%;
         height: auto;
+        position: relative;
     }
 
     main .container{
         height: auto;
+        position: relative;
     }
 
     main .superior{
         display: block;
+        position: relative;
     }
 
 
@@ -250,10 +249,12 @@ main .icons img:hover {
     main .menu img {
         width: 100px;
         height: auto;
+        position: relative;
     }
 
     main .icons {
         position: relative;
-        background-color: violet;
+        background-color: aqua;
+        margin-top: 35%;
     }
 }
