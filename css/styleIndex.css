@@ -79,7 +79,7 @@ main .contenedor-slider::before {
 
 main .carrusel {
     /*Es la cantidad de imagenes que usaras*/
-    width: 200%;
+    width: 900%;
     /*No NOTICIAS 1/2*/
     height: 100%;
     display: flex;
@@ -88,7 +88,7 @@ main .carrusel {
 
 main .slider-section {
     /*Se divide por la cantidad de imagenes a usar*/
-    width: calc(100% / 2);
+    width: calc(100% / 9);
     /*No. NOTICIAS 2/2*/
     height: 100%;
     text-align: center;
