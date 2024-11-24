@@ -1,1 +1,0 @@
-const biblioteca = document.querySelector(".prueba1");
